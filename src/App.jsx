@@ -36,12 +36,6 @@ function App() {
     const pathLength = spherePathEls.length;
     const animations = [];
 
-    const rightToLeft = document.querySelector('.rightToLeft').cloneNode(true);
-    const leftToRight = document.querySelector('.leftToRight').cloneNode(true);
-
-    document.querySelector('.rightToLeft-container').appendChild(rightToLeft);
-    document.querySelector('.leftToRight-container').appendChild(leftToRight)
-
     fitElementToParent(sphereEl);
 
     const breathAnimation = anime({
@@ -253,8 +247,20 @@ function App() {
               <div className='rightToLeft'>
                 <p>- HTML CSS Javascript PHP -</p>
               </div>
+              <div className='rightToLeft'>
+                <p>- HTML CSS Javascript PHP -</p>
+              </div>
+              <div className='rightToLeft'>
+                <p>- HTML CSS Javascript PHP -</p>
+              </div>
             </div>
             <div className='leftToRight-container'>
+              <div className='leftToRight'>
+                <p>- PHP Javascript CSS HTML -</p>
+              </div>
+              <div className='leftToRight'>
+                <p>- PHP Javascript CSS HTML -</p>
+              </div>
               <div className='leftToRight'>
                 <p>- PHP Javascript CSS HTML -</p>
               </div>
