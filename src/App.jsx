@@ -104,18 +104,6 @@ function App() {
       loop: true,
     });
 
-    const glowingBorder = anime({
-      targets: '.box div',
-      boxShadow: [
-        '0px 0px 0px rgba(255, 0, 0, 0.3)',
-        '0px 0px 4.5px rgba(255, 0, 0, 1)',
-        '0px 0px 0px rgba(255, 0, 0, 0.3)'
-      ],
-      easing: 'easeInOutQuad',
-      duration: 7000,
-      loop: true
-    });
-
     const handleScroll = () => {
       elementsRef.current.forEach((element) => {
         const rect = element.getBoundingClientRect();
@@ -147,7 +135,6 @@ function App() {
       shadowAnimation.play();
       infiniteScrollRightToLeft.play();
       infiniteScrollLeftToRight.play();
-      glowingBorder.play();
     }
 
     init();
@@ -269,14 +256,6 @@ function App() {
           <div className='skill-container'>
             <div>
               <img src={images.arrowIcon} alt="Arrow Icon" />
-              <h2>MongoDB</h2>
-            </div>
-            <div>
-              <img src={images.arrowIcon} alt="Arrow Icon" />
-              <h2>Express.js</h2>
-            </div>
-            <div>
-              <img src={images.arrowIcon} alt="Arrow Icon" />
               <h2>React</h2>
             </div>
             <div>
@@ -289,11 +268,11 @@ function App() {
             </div>
             <div>
               <img src={images.arrowIcon} alt="Arrow Icon" />
-              <h2>MySQL</h2>
+              <h2>Express.js</h2>
             </div>
             <div>
               <img src={images.arrowIcon} alt="Arrow Icon" />
-              <h2>AWS</h2>
+              <h2>Vite</h2>
             </div>
             <div>
               <img src={images.arrowIcon} alt="Arrow Icon" />
@@ -305,7 +284,39 @@ function App() {
             </div>
             <div>
               <img src={images.arrowIcon} alt="Arrow Icon" />
+              <h2>Axios.js</h2>
+            </div>
+            <div>
+              <img src={images.arrowIcon} alt="Arrow Icon" />
               <h2>jQuery</h2>
+            </div>
+            <div>
+              <img src={images.arrowIcon} alt="Arrow Icon" />
+              <h2>Bootstrap</h2>
+            </div>
+            <div>
+              <img src={images.arrowIcon} alt="Arrow Icon" />
+              <h2>MySQL</h2>
+            </div>
+            <div>
+              <img src={images.arrowIcon} alt="Arrow Icon" />
+              <h2>MongoDB</h2>
+            </div>
+            <div>
+              <img src={images.arrowIcon} alt="Arrow Icon" />
+              <h2>SQLite</h2>
+            </div>
+            <div>
+              <img src={images.arrowIcon} alt="Arrow Icon" />
+              <h2>AWS</h2>
+            </div>
+            <div>
+              <img src={images.arrowIcon} alt="Arrow Icon" />
+              <h2>Azure</h2>
+            </div>
+            <div>
+              <img src={images.arrowIcon} alt="Arrow Icon" />
+              <h2>Python</h2>
             </div>
           </div>
         </div>
@@ -316,6 +327,11 @@ function App() {
           <div>
             <h2>V'tha Cookies Website</h2>
             <p>Created a visually appealing and user-friendly website for a local bakery to showcase their products and allow customers to place orders online. display their menu, promote special offers, and allow customers to place orders for pickup or delivery.</p>
+            <ul className='language-container'>
+              <li className='language'>HTML5</li>
+              <li className='language'>CSS3</li>
+              <li className='language'>Javascript</li>
+            </ul>
           </div>
           <img src={images.vthaCookiesLogo} alt="V'tha Cookies Logo" ref={setRef} style={{width : 0}} />
         </div>
@@ -323,6 +339,10 @@ function App() {
           <div>
             <h2>Simple-Tube</h2>
             <p>Developed a custom video streaming platform inspired by YouTube, allowing view and interact with videos. The project aimed to replicate core features of YouTube with added customization and personal touches.</p>
+            <ul className='language-container'>
+              <li className='language'>React</li>
+              <li className='language'>Vite</li>
+            </ul>
           </div>
           <img src={images.stubeLogo} alt="STube Logo" ref={setRef} style={{width : 0}} />
         </div>
@@ -330,6 +350,10 @@ function App() {
           <div>
             <h2>Chatty</h2>
             <p>Developed a real-time chat application using Laravel to facilitate instant messaging between users. The project focuses on providing a reliable and interactive chat experience with features such as user authentication, private and and real-time notifications.</p>
+            <ul className='language-container'>
+              <li className='language'>Laravel</li>
+              <li className='language'>SQlite</li>
+            </ul>
           </div>
           <img src={images.chattyLogo} alt="Chatty Logo" ref={setRef} style={{width : 0}} />
         </div>
@@ -337,6 +361,11 @@ function App() {
           <div>
             <h2>Bank-Website Design</h2>
             <p>Designed and developed a modern, professional bank website with a strong emphasis on user-centered design. The project prioritized creating a visually appealing and intuitive interface to enhance the overall user experience.</p>
+            <ul className='language-container'>
+              <li className='language'>HTML5</li>
+              <li className='language'>CSS3</li>
+              <li className='language'>Javascript</li>
+            </ul>
           </div>
           <img src={images.bankbluesLogo} alt="BankSafe Logo" ref={setRef} style={{width : 0}} />
         </div>
