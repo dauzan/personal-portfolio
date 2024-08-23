@@ -438,7 +438,6 @@
 
   .navbar .content-list {
     position: absolute;
-    display: none;
     top: 100%;
     right: 0;
     flex-direction: column;
@@ -447,6 +446,7 @@
     background-color: #2f2f2fc9;
     gap: 2em;
     padding: 20px 0;
+    z-index: -1;
   }
 
   .navbar .content-list a {
@@ -455,16 +455,6 @@
 
   .navbar .content-list.show {
     display: flex;
-    animation: showed 0.6s ease-out;
-  }
-
-  @keyframes showed {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
   }
 
   .navbar .menu-toggle {
