@@ -10,6 +10,26 @@ function App() {
 
   const toggleMenu = () => {
     setOpen(!open);
+
+    if (!open) {
+      document.querySelector('.navbar .content-list').style.visibility = "visible"
+      anime({
+        targets: ".navbar .content-list",
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'easeOutQuad'
+      });
+    } else {
+      anime({
+        targets: ".navbar .content-list",
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'easeOutQuad',
+        complete: () => {
+          document.querySelector('.navbar .content-list').style.visibility = "hidden";
+        }
+      });
+    }
   }
 
   function fitElementToParent(el, padding) {
@@ -88,15 +108,15 @@ function App() {
       autoplay: false
     });
 
-    const infiniteScrollRightToLeft = anime({
+    const rightToLeftAnimation = anime({
       targets: '.rightToLeft',
       translateX: ['0', '-100%'],
       duration: 25000,
       easing: 'linear',
       loop: true,
     });
-
-    const infiniteScrollLeftToRight = anime({
+  
+    const leftToRightAnimation = anime({
       targets: '.leftToRight',
       translateX: ['-100%', '0'],
       duration: 25000,
@@ -133,8 +153,8 @@ function App() {
       introAnimation.play();
       breathAnimation.play();
       shadowAnimation.play();
-      infiniteScrollRightToLeft.play();
-      infiniteScrollLeftToRight.play();
+      rightToLeftAnimation.play();
+      leftToRightAnimation.play();
     }
 
     init();
@@ -158,7 +178,7 @@ function App() {
     <>
       <nav className='navbar'>
         <h1>D</h1>
-        <div className={`content-list ${open ? 'show' : ''}`}>
+        <div className={`content-list`} style={{visibility: 'hidden'}}>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#credits">Contacts</a>
