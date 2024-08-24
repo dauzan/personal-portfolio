@@ -159,7 +159,21 @@ function App() {
 
     init();
 
-    window.addEventListener('scroll', handleScroll);
+    const pauseAnimation = () => {
+      if (window.scrollY >= window.innerHeight) {
+        breathAnimation.pause();
+        shadowAnimation.pause();
+      } else {
+        breathAnimation.play();
+        shadowAnimation.play();
+      }
+    }
+
+    const pauseAndResumeAnimation = [handleScroll, pauseAnimation]
+
+    pauseAndResumeAnimation.forEach(element => {
+      window.addEventListener('scroll', element);
+    })
     handleScroll();
 
     return () => {
@@ -178,7 +192,7 @@ function App() {
     <>
       <nav className='navbar'>
         <h1>D</h1>
-        <div className={`content-list`} style={{visibility: 'hidden'}}>
+        <div className={`content-list`}>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#credits">Contacts</a>
