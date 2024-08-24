@@ -446,6 +446,7 @@
     background-color: #2f2f2fc9;
     gap: 2em;
     padding: 20px 0;
+    visibility: hidden;
     z-index: -1;
   }
 
@@ -568,6 +569,15 @@
     font-size: 2.5rem;
   }
 
+  .contact-box {
+    padding: 10px;
+  }
+
+  .contact-box img {
+    height: 18px;
+    margin-right: 10px;
+  }
+
   .contact-box p, .contact-box a {
     font-size: 1rem;
   }
@@ -577,7 +587,7 @@
   }
 
   .site-footer h1 {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
 
